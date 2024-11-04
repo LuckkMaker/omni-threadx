@@ -44,3 +44,13 @@ omni_add_configure_file(${THREADX_CFG_SOURCE_FILE} ${THREADX_CFG_TARGET_FILE})
 target_sources(omni-threadx INTERFACE
     ${THREADX_LL_CFG_TARGET_FILE}
 )
+
+omni_lib_src_ifdef(CONFIG_THREADX_EXECUTION_PROFILE 
+    omni-threadx
+    utility/execution_profile_kit/tx_execution_profile.c
+)
+
+omni_lib_inc_ifdef(CONFIG_THREADX_EXECUTION_PROFILE
+    omni-threadx
+    utility/execution_profile_kit
+)

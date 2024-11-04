@@ -1,0 +1,8 @@
+menu "ThreadX Conponent"
+    config THREADX_EXECUTION_PROFILE
+        bool "Execution Profile kit"
+        default n
+        help
+          Enable execution profile kit
+
+endmenu # ThreadX Conponent
