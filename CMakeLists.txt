@@ -45,6 +45,7 @@ target_sources(omni-threadx INTERFACE
     ${THREADX_LL_CFG_TARGET_FILE}
 )
 
+# Add the ThreadX execution profile kit
 omni_lib_src_ifdef(CONFIG_THREADX_EXECUTION_PROFILE 
     omni-threadx
     utility/execution_profile_kit/tx_execution_profile.c
@@ -53,4 +54,15 @@ omni_lib_src_ifdef(CONFIG_THREADX_EXECUTION_PROFILE
 omni_lib_inc_ifdef(CONFIG_THREADX_EXECUTION_PROFILE
     omni-threadx
     utility/execution_profile_kit
+)
+
+# Add the ThreadX low power
+omni_lib_src_ifdef(CONFIG_THREADX_LOW_POWER 
+    omni-threadx
+    utility/low_power/tx_low_power.c
+)
+
+omni_lib_inc_ifdef(CONFIG_THREADX_LOW_POWER
+    omni-threadx
+    utility/low_power
 )

@@ -1,0 +1,19 @@
+menu "ThreadX Configuration"
+
+config THREADX_PERFORMANCE_INFO
+    bool "Performance Information"
+    default n
+
+config THREADX_TRACE
+    bool "ThreadX Trace"
+    default n
+
+config THREADX_LOW_POWER
+    bool "Low Power"
+    default n
+
+config THREADX_EXECUTION_PROFILE
+    bool "Execution Profile kit"
+    default n
+
+endmenu # ThreadX Configuration
